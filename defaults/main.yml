@@ -1,5 +1,4 @@
 ---
-# Пакеты, необходимые для установки Docker
 docker_packages:
   - apt-transport-https
   - ca-certificates
@@ -7,7 +6,6 @@ docker_packages:
   - gnupg-agent
   - software-properties-common
 
-# Параметры контейнера по умолчанию
-container_image: geerlingguy/demo-flask-api:latest
-container_name: demo-flask-api
-container_port: 5000 
+container_image: timurbabs/django:latest
+container_name: django-app
+container_port: 8000 
