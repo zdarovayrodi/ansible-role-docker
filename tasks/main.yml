@@ -26,6 +26,12 @@
     name: python3-docker
     state: present
 
+- name: Add vagrant user to docker group
+  user:
+    name: vagrant
+    groups: docker
+    append: yes
+
 - name: Pull Docker image
   docker_image:
     name: "{{ container_image }}"
